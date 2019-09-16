@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="jumbotron py-4">
+        <p class="h1 text-center mb-0">Conditional Rendering</p>
+    </div>
+
+    <div class="card mb-2" *ngIf="cardFlag">
+        <div class="card-body">
+            <p class="lead mb-0">
+                Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN
+                and a template starter page. Bootstrap employs a handful of important global styles and settings that you’ll
+                need to be aware of when using it, all of which are almost exclusively geared towards the normalization of
+                cross browser styles. Let’s dive in.
+            </p>
+        </div>
+    </div>
+
+    <button class="btn btn-{{(cardFlag) ? 'danger' : 'success'}}" (click)="toggleFlag()">
+        <i class="fas fa-eye{{(cardFlag) ? '-slash' : '' }}"></i>
+    </button>
+
+</div>
